@@ -5,9 +5,6 @@
 	"build":{
 		"dockerfile": "Dockerfile"
 	},
-	"mounts": [
-		"source=${localEnv:HOME}/.cargo,target=/usr/local/cargo,type=bind,consistency=cached"
-	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": {},
@@ -21,7 +18,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
+	"postCreateCommand": "rustc --version",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
